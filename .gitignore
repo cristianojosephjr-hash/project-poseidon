@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+.playwright-cli/
+worker-configuration.d.ts
+*.cpuprofile
+npm-debug.log*
+output/test-runs/

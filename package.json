@@ -1,0 +1,25 @@
+{
+  "name": "project-poseidon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Poseidon execution runtime implementing transcript-derived agent architecture on Cloudflare Workers Agents SDK.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "cf:types": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "check:start": "wrangler check startup",
+    "verify:local": "node scripts/verify-local.mjs",
+    "smoke:live": "node scripts/live-smoke.mjs",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:production": "wrangler deploy --env production"
+  },
+  "dependencies": {
+    "agents": "^0.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "^6.0.2",
+    "wrangler": "^4.80.0"
+  }
+}

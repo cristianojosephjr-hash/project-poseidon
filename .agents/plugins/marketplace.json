@@ -1,0 +1,56 @@
+{
+  "name": "poseidon-local",
+  "interface": {
+    "displayName": "Poseidon Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "cloudflare-act",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cloudflare-act"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "netlify-act",
+      "source": {
+        "source": "local",
+        "path": "./plugins/netlify-act"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "build-web-apps-act",
+      "source": {
+        "source": "local",
+        "path": "./plugins/build-web-apps-act"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "github-act",
+      "source": {
+        "source": "local",
+        "path": "./plugins/github-act"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

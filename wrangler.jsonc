@@ -1,0 +1,63 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "poseidon-agent-service",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-08",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "POSEIDON_AGENT",
+        "class_name": "PoseidonAgent"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "PoseidonAgent"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ENVIRONMENT": "development",
+    "APP_VERSION": "poseidon-v1",
+    "ALLOWED_ORIGIN": "*",
+    "MAX_AGENT_CYCLES": "10",
+    "COMPACTION_RETRY_LIMIT": "3",
+    "KAIROS_ENABLED": "false"
+  },
+  "env": {
+    "staging": {
+      "name": "poseidon-agent-service-staging",
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "APP_VERSION": "poseidon-staging-v1",
+        "ALLOWED_ORIGIN": "*",
+        "MAX_AGENT_CYCLES": "10",
+        "COMPACTION_RETRY_LIMIT": "3",
+        "KAIROS_ENABLED": "true"
+      }
+    },
+    "production": {
+      "name": "poseidon-agent-service-production",
+      "vars": {
+        "ENVIRONMENT": "production",
+        "APP_VERSION": "poseidon-production-v1",
+        "ALLOWED_ORIGIN": "*",
+        "MAX_AGENT_CYCLES": "12",
+        "COMPACTION_RETRY_LIMIT": "3",
+        "KAIROS_ENABLED": "true"
+      }
+    }
+  }
+}
