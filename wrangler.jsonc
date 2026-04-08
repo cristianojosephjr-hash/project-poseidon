@@ -39,6 +39,17 @@
   "env": {
     "staging": {
       "name": "poseidon-agent-service-staging",
+      "ai": {
+        "binding": "AI"
+      },
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "POSEIDON_AGENT",
+            "class_name": "PoseidonAgent"
+          }
+        ]
+      },
       "vars": {
         "ENVIRONMENT": "staging",
         "APP_VERSION": "poseidon-staging-v1",
@@ -50,6 +61,17 @@
     },
     "production": {
       "name": "poseidon-agent-service-production",
+      "ai": {
+        "binding": "AI"
+      },
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "POSEIDON_AGENT",
+            "class_name": "PoseidonAgent"
+          }
+        ]
+      },
       "vars": {
         "ENVIRONMENT": "production",
         "APP_VERSION": "poseidon-production-v1",
