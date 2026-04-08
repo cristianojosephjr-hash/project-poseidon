@@ -5,3 +5,6 @@ worker-configuration.d.ts
 *.cpuprofile
 npm-debug.log*
 output/test-runs/
+
+# Local Netlify folder
+.netlify

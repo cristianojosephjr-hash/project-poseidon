@@ -1,0 +1,10 @@
+{
+    "site_id":  "4f2915e8-8c16-40b4-8a5e-b0c195db8085",
+    "site_name":  "project-poseidon-20260408-135844",
+    "deploy_id":  "69d6123a081cc3102ff4863a",
+    "deploy_url":  "https://69d6123a081cc3102ff4863a--project-poseidon-20260408-135844.netlify.app",
+    "logs":  "https://app.netlify.com/projects/project-poseidon-20260408-135844/deploys/69d6123a081cc3102ff4863a",
+    "function_logs":  "https://app.netlify.com/projects/project-poseidon-20260408-135844/logs/functions",
+    "edge_function_logs":  "https://app.netlify.com/projects/project-poseidon-20260408-135844/logs/edge-functions",
+    "url":  "https://project-poseidon-20260408-135844.netlify.app"
+}

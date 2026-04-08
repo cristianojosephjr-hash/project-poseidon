@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-04-08T06:33:53.301Z",
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "results": [
+    {
+      "target": "staging",
+      "check": "GET /health",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "environment": "staging",
+        "service": "newzen-service"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "GET /version",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "build": "staging-v2",
+        "expectedBuild": "staging-v2"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "OPTIONS /v1/chat",
+      "status": 204,
+      "ok": true,
+      "details": {
+        "bodyLength": 0,
+        "allowOrigin": "*",
+        "allowMethods": "GET,POST,OPTIONS",
+        "allowHeaders": "content-type,authorization,x-api-key,x-request-id"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "POST /v1/chat invalid payload",
+      "status": 400,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "error",
+        "errorCode": "VALIDATION_ERROR",
+        "hasTraceId": true,
+        "sampleMessage": "content must be a string"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "POST /v1/chat valid payload",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "hasTraceId": true,
+        "hasContent": true,
+        "cacheStatus": "unknown",
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "GET /v1/state?instance=default",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "hasMessages": false,
+        "summaryType": "string"
+      }
+    },
+    {
+      "target": "staging",
+      "check": "GET /v1/automations?instance=default",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "automationsType": "object"
+      }
+    },
+    {
+      "target": "production",
+      "check": "GET /health",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "environment": "production",
+        "service": "newzen-service"
+      }
+    },
+    {
+      "target": "production",
+      "check": "GET /version",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "build": "production-v2",
+        "expectedBuild": "production-v2"
+      }
+    },
+    {
+      "target": "production",
+      "check": "OPTIONS /v1/chat",
+      "status": 204,
+      "ok": true,
+      "details": {
+        "bodyLength": 0,
+        "allowOrigin": "*",
+        "allowMethods": "GET,POST,OPTIONS",
+        "allowHeaders": "content-type,authorization,x-api-key,x-request-id"
+      }
+    },
+    {
+      "target": "production",
+      "check": "POST /v1/chat invalid payload",
+      "status": 400,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "error",
+        "errorCode": "VALIDATION_ERROR",
+        "hasTraceId": true,
+        "sampleMessage": "content must be a string"
+      }
+    },
+    {
+      "target": "production",
+      "check": "POST /v1/chat valid payload",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "hasTraceId": true,
+        "hasContent": true,
+        "cacheStatus": "unknown",
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+      }
+    },
+    {
+      "target": "production",
+      "check": "GET /v1/state?instance=default",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "hasMessages": false,
+        "summaryType": "string"
+      }
+    },
+    {
+      "target": "production",
+      "check": "GET /v1/automations?instance=default",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "envelopeStatus": "ok",
+        "automationsType": "object"
+      }
+    },
+    {
+      "target": "netlify",
+      "check": "HEAD /",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "server": "Netlify"
+      }
+    },
+    {
+      "target": "netlify",
+      "check": "GET /",
+      "status": 200,
+      "ok": true,
+      "details": {
+        "titleMatch": true,
+        "htmlLength": 1429
+      }
+    }
+  ]
+}
